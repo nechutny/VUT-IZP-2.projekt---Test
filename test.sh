@@ -141,11 +141,32 @@ fi
 
 echo "\n[test_12] Test zda nespadne pri nesmyslnem vstupu";
 $exec --triangle "You know nuffin Jon Snow"  > /dev/null
+if [ "$?" != "0" ]; then
+  echo " ... OK";
+else
+        echo " ... Chyba, pri nespravnom parametri sa ocakava z funkcie main return != 0";
+fi
+
 $exec --asin "Rains of Castamere"  > /dev/null
+if [ "$?" != "0" ]; then
+  echo " ... OK";
+else
+        echo " ... Chyba, pri nespravnom parametri sa ocakava z funkcie main return != 0";
+fi
+
 $exec --sqrt "Daenerys Targaryen"  > /dev/null
 
+if [ "$?" != "0" ]; then
+  echo " ... OK";
+else
+        echo " ... Chyba, pri nespravnom parametri sa ocakava z funkcie main return != 0";
+fi
+
+# Pre istotu
+echo "\n[test_13] Test ci program vracia status 0 pri spravnom behu";
+$exec --sqrt 2  > /dev/null
 if [ "$?" = "0" ]; then
   echo " ... OK";
 else
-        echo " ... Chyba";
+        echo " ... Chyba, program ma vratit return EXIT_SUCCESS ak vypocita spravne";
 fi

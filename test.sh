@@ -1,11 +1,10 @@
 #!/bin/sh
 
 #
-# Autor:      Stanislav Nechutný (xnechu01)
+# Autor:      Stanislav Nechutný (xnechu01) - iniciator testovania
+# Upravil:    Jan Jeliček, Adam Lučanský (xlucan01)
 # Název:      2. projekt IZP na FIT VUT - Test
 # Repozitář:  https://github.com/lucansky/VUT-IZP-2.projekt---Test.git
-#
-#   upravil Jan Jileček pro proj2
 
 # Hladanie binarky, kvoli clonovaniu gitu od ineho adresara
 exec=`find .. -name "proj2" | tail -n"1"`

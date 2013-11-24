@@ -169,3 +169,14 @@ if [ "$?" = "0" ]; then
 else
         echo " ... Chyba, program ma vratit return EXIT_SUCCESS ak vypocita spravne";
 fi
+
+echo "\n[test 14] Test --triangle 0 0 1 0 0 -1";
+$exec --triangle 0 0 1 0 0 -1 > test/test_14.output
+diff test/test_14.test test/test_14.output
+
+if [ "$?" = "0" ]; then
+    echo " ... OK";
+    rm test/test_14.output;
+else
+    echo " ... Chyba";
+fi

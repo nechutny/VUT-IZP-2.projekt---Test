@@ -5,5 +5,5 @@ Testovacie scripty pre druhy projekt predmetu IZP
 
 Autor : Stanislav Nechutný (xnechu01)
 
-Upravil : Jan Jeliček, Adam Lučanský (xlucan01)
+Upravil : Jan Jileček (xjilec00), Adam Lučanský (xlucan01)
 

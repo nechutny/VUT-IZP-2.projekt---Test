@@ -61,7 +61,7 @@ else
 fi
 
 echo "\n[test_5] Test --asin 0";
-$exec --asin 1 > test/test_5.output
+$exec --asin 0 > test/test_5.output
 diff test/test_5.test test/test_5.output
 
 if [ "$?" = "0" ]; then
@@ -139,21 +139,21 @@ fi
 
 
 echo "\n[test_12] Test zda nespadne pri nesmyslnem vstupu";
-$exec --triangle "You know nuffin Jon Snow"  > /dev/null
+$exec --triangle "You know nuffin Jon Snow" > /dev/null 2>&1
 if [ "$?" != "0" ]; then
   echo " ... OK";
 else
         echo " ... Chyba, pri nespravnom parametri sa ocakava z funkcie main return != 0";
 fi
 
-$exec --asin "Rains of Castamere"  > /dev/null
+$exec --asin "Rains of Castamere" > /dev/null 2>&1
 if [ "$?" != "0" ]; then
   echo " ... OK";
 else
         echo " ... Chyba, pri nespravnom parametri sa ocakava z funkcie main return != 0";
 fi
 
-$exec --sqrt "Daenerys Targaryen"  > /dev/null
+$exec --sqrt "Daenerys Targaryen" > /dev/null 2>&1
 
 if [ "$?" != "0" ]; then
   echo " ... OK";
@@ -163,7 +163,7 @@ fi
 
 # Pre istotu
 echo "\n[test_13] Test ci program vracia status 0 pri spravnom behu";
-$exec --sqrt 2  > /dev/null
+$exec --sqrt 2  > /dev/null 2>&1
 if [ "$?" = "0" ]; then
   echo " ... OK";
 else
